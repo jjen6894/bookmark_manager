@@ -29,6 +29,28 @@ Capybara.app = BookmarksManager
 #
 # See http://rubydoc.info/gems/rspec-core/RSpec/Core/Configuration
 RSpec.configure do |config|
+
+    ENV["RACK_ENV"] = "test"
+
+    config.before(:suite) do
+      DatabaseCleaner.strategy = :transaction
+      DatabaseCleaner.clean_with(:truncation)
+    end
+
+    config.around(:each) do |cleaner|
+      DatabaseCleaner.cleaning do
+        cleaner.run
+      end
+    end
+
+
+
+
+
+
+
+
+
   config.include Capybara::DSL
   # rspec-expectations config goes here. You can use an alternate
   # assertion/expectation library such as wrong or the stdlib/minitest

@@ -5,13 +5,13 @@ feature "should see form" do
 
       visit '/links/new'
       fill_in 'title', with: 'This is Bing'
-      fill_in 'url', with: 'https://www.bing.com'
+      fill_in 'url', with: 'http://www.bing.com/'
       click_button 'Bookmark link'
 
 
       expect(page.current_path).to eq('/links')
 
-      within 'ul#links' do
+      within 'ol#links' do
         expect(page).to have_content('This is Bing')
       end
     end

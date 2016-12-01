@@ -9,7 +9,7 @@ feature 'Adding tags' do
 
     click_button 'Bookmark link'
     link = Link.first
-    expect(link.tags.map(&:name)).to include('education')
+    expect(link.tags.map(&:tags)).to include('education')
   end
 
 end

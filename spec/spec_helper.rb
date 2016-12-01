@@ -2,6 +2,8 @@
 
 ENV['RACK_ENV'] = 'test'
 
+require './app/data_mapper_setup'
+
 require File.join(File.dirname(__FILE__), '..', 'app/app.rb')
 
 require 'capybara'

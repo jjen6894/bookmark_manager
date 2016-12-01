@@ -1,19 +1,19 @@
-US-1
 As a user,
-So that I can see my bookmarks,
-I want to see a list of links
+So that I can review my bookmarks,
+I want to see a list of links on the homepage.
 
-US-2
 As a user,
-So that I can add a bookmark,
-I want to add a link to the database
+So that I can quickly find web sites I recently bookmarked,
+I would like to see links in descending chronological order.
 
-US-3
 As a user,
-So that group my bookmarks,
-I want to be able to tag them.
+So that I can remember a website,
+I want to add a site's address and title to my bookmark manager.
 
-US-4
 As a user,
-So that I can quickly find links on a particular topic,
-I would like to filter links by tag.
+So that I can categorise my bookmarks,
+I want to add tags to links.
+
+As a user,
+So that I can find a bookmark more easily,
+I want to filter my bookmarks by tag.

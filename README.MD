@@ -38,4 +38,3 @@ Short blog post:
     R - SELECT * FROM students;
     U - UPDATE students SET name = 'Jackory' WHERE name = 'Rojack';
     D - DELETE FROM students WHERE name = 'Jackory';
->>>>>>> 1f87f91a74f3cf4cec1b42f246b696c6da74d9e1

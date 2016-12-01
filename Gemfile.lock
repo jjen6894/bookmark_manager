@@ -13,12 +13,15 @@ GEM
       rack (>= 1.0.0)
       rack-test (>= 0.5.4)
       xpath (~> 2.0)
+<<<<<<< HEAD
     childprocess (0.5.9)
       ffi (~> 1.0, >= 1.0.11)
 <<<<<<< HEAD
 =======
     coderay (1.1.1)
 >>>>>>> 4626aced131728abeab039cf87d469d9c5afe780
+=======
+>>>>>>> a4fe51161571681599ba32c9a6e43982410f5a6b
     data_mapper (1.2.0)
       dm-aggregates (~> 1.2.0)
       dm-constraints (~> 1.2.0)
@@ -31,6 +34,7 @@ GEM
       dm-validations (~> 1.2.0)
     data_objects (0.10.17)
       addressable (~> 2.1)
+    database_cleaner (1.5.3)
     diff-lcs (1.2.5)
     dm-aggregates (1.2.0)
       dm-core (~> 1.2.0)
@@ -68,16 +72,16 @@ GEM
       dm-core (~> 1.2.0)
     do_postgres (0.10.17)
       data_objects (= 0.10.17)
-    extlib (0.9.16)
     fastercsv (1.5.5)
-    ffi (1.9.14)
-    highline (1.7.8)
     json (1.8.3)
     json_pure (1.8.3)
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
     method_source (0.8.2)
 >>>>>>> 4626aced131728abeab039cf87d469d9c5afe780
+=======
+>>>>>>> a4fe51161571681599ba32c9a6e43982410f5a6b
     mime-types (3.1)
       mime-types-data (~> 3.2015)
     mime-types-data (3.2016.0521)
@@ -86,14 +90,19 @@ GEM
     nokogiri (1.6.8.1)
       mini_portile2 (~> 2.1.0)
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
     pry (0.10.4)
       coderay (~> 1.1.0)
       method_source (~> 0.8.1)
       slop (~> 3.4)
 >>>>>>> 4626aced131728abeab039cf87d469d9c5afe780
+=======
+>>>>>>> a4fe51161571681599ba32c9a6e43982410f5a6b
     public_suffix (2.0.4)
-    rack (2.0.1)
+    rack (1.6.5)
+    rack-protection (1.5.3)
+      rack
     rack-test (0.6.3)
       rack (>= 1.0)
     rspec (3.5.0)
@@ -108,9 +117,8 @@ GEM
     rspec-mocks (3.5.0)
       diff-lcs (>= 1.2.0, < 2.0)
       rspec-support (~> 3.5.0)
-    rspec-sinatra (0.1.2)
-      templater (>= 1.0.0)
     rspec-support (3.5.0)
+<<<<<<< HEAD
     rubyzip (1.2.0)
     selenium-webdriver (3.0.3)
       childprocess (~> 0.5)
@@ -122,13 +130,15 @@ GEM
 =======
     slop (3.6.0)
 >>>>>>> 4626aced131728abeab039cf87d469d9c5afe780
+=======
+    sinatra (1.4.7)
+      rack (~> 1.5)
+      rack-protection (~> 1.4)
+      tilt (>= 1.3, < 3)
+>>>>>>> a4fe51161571681599ba32c9a6e43982410f5a6b
     stringex (1.5.1)
-    templater (1.0.0)
-      diff-lcs (>= 1.1.2)
-      extlib (>= 0.9.5)
-      highline (>= 1.4.0)
+    tilt (2.0.5)
     uuidtools (2.1.5)
-    websocket (1.2.3)
     xpath (2.0.0)
       nokogiri (~> 1.3)
 
@@ -138,15 +148,17 @@ PLATFORMS
 DEPENDENCIES
   capybara
   data_mapper
+  database_cleaner
   dm-postgres-adapter
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
   pry
 >>>>>>> 4626aced131728abeab039cf87d469d9c5afe780
+=======
+>>>>>>> a4fe51161571681599ba32c9a6e43982410f5a6b
   rspec
-  rspec-sinatra
-  selenium-webdriver
-  sinatra
+  sinatra (= 1.4.7)
 
 <<<<<<< HEAD
 RUBY VERSION

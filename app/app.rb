@@ -26,17 +26,14 @@ class BookmarksManager < Sinatra::Base
     user =  User.create(email: params[:email], password: params[:password]) if params[:password] == params[:password_confirmation]
     session[:user_id] = user.id unless user == nil
 
-    if user == nil
+    if user ==nil || params[:email] == ""
       flash[:notice] = "Password and confirmation password do not match"
+      redirect to('/')
     else
       flash[:notice] = "Successfully signed up"
+      redirect to('/links')
     end
 
-
-
-    redirect to('/') if user == nil
-
-    redirect to('/links')
   end
 
   helpers do
@@ -64,6 +61,8 @@ class BookmarksManager < Sinatra::Base
       link.tags << Tag.create(tags: tag)
     end
     link.save
+
+
     redirect to('/links')
   end
 

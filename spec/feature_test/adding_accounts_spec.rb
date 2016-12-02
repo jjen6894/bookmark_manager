@@ -30,7 +30,7 @@ feature 'adding accounts to the website' do
   end
 
   feature 'Asks for password confirmation' do
-    scenario "I can check to see if my password is correctly" do
+    scenario "I can check to see if my password is entered correctly and stays on the same page and displays an error message" do
         def sign_up
             visit '/'
             fill_in "email", with: "Jack"
@@ -43,7 +43,14 @@ feature 'adding accounts to the website' do
 
 
       expect { sign_up }.to change(User, :count).by(0)
+      expect(page).to have_content("Password and confirmation password do not match")
+      expect(page.current_path).to eq('/')
     end
+
+
+
+
+
   end
 
 

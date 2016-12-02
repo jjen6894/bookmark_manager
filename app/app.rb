@@ -3,6 +3,7 @@ ENV["RACK_ENV"] ||= "development"
 require 'sinatra/base'
 require_relative 'data_mapper_setup'
 require 'pry'
+require 'sinatra/flash'
 
 
 
@@ -12,9 +13,9 @@ class BookmarksManager < Sinatra::Base
 
   enable :sessions
   set :session_secret, 'super secret jack'
+  register Sinatra::Flash
 
   get '/' do
-    p params
     erb :'username'
   end
 
@@ -24,6 +25,16 @@ class BookmarksManager < Sinatra::Base
 
     user =  User.create(email: params[:email], password: params[:password]) if params[:password] == params[:password_confirmation]
     session[:user_id] = user.id unless user == nil
+
+    if user == nil
+      flash[:notice] = "Password and confirmation password do not match"
+    else
+      flash[:notice] = "Successfully signed up"
+    end
+
+
+
+    redirect to('/') if user == nil
 
     redirect to('/links')
   end

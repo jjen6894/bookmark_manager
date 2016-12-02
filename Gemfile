@@ -6,6 +6,7 @@ gem "sinatra"
 gem "rspec-sinatra"
 gem 'pry'
 gem 'rake'
+gem 'session'
 
 group :test do
   gem 'database_cleaner'

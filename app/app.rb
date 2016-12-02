@@ -4,19 +4,40 @@ require 'sinatra/base'
 require_relative 'data_mapper_setup'
 require 'pry'
 
+
+
 # set :session_secret, 'super secret jack'
 
 class BookmarksManager < Sinatra::Base
 
   enable :sessions
+  set :session_secret, 'super secret jack'
 
   get '/' do
+    p params
     erb :'username'
-    session[:current_user] = params[:Username]
   end
 
+
+  post '/user_details' do
+
+
+    user =  User.create(email: params[:email], password: params[:password])
+    p params
+    session[:user_id] = user.id
+
+    redirect to('/links')
+  end
+
+  helpers do
+    def current_user
+      @current_user ||= User.get(session[:user_id])
+    end
+  end
+
+
   get '/links' do
-    session[:current_user]
+
     @link = Link.all
     erb :'links/index'
   end
